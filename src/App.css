@@ -1,18 +1,96 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 1px;
+  height: 100vh;
+  overflow: auto;
+}
+
+.App::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.editorDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 50%;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.previewDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.tit1{
+  width: fit-content;
   text-align: center;
+  height: fit-content;
+  margin-bottom: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+}
+
+.tit2{
+  width: fit-content;
+  text-align: center;
+  height: fit-content;
+  margin-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+}
+
+.textAreaDiv{
+  border: 5px solid darkblue;
+  background-color: darkblue;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 textarea {
+  text-align: left;
   width: 100%;
-  min-height: 200px;
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 10px;
-  border: none;
+  height: 100%;
+  overflow: auto;
   resize: none;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
 }
 
 #preview {
-  border: 3px solid black;
-  border-radius: 5px;
+  border: 5px dashed purple;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+#preview::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
 }

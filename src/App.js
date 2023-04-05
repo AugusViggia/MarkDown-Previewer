@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { marked } from "marked";
+import image from './tick.png';
 
 function App() {
   const [text, setText] = useState(`
@@ -26,7 +27,7 @@ function App() {
 
   > blockquote
 
-  ![alt text](image.jpg)
+  ![alt text](${image})
 
   **bold text**
   `);
@@ -41,15 +42,25 @@ function App() {
 
   return (
     <div className="App">
-      <h3>Markdown Editor: </h3>
-      <textarea id="editor" onChange={handleChange} value={text}></textarea>
-      <h3>Markdown Previewer: </h3>
-      <div
-        id="preview"
-        dangerouslySetInnerHTML={{
-          __html: marked(text),
-        }}
-      ></div>
+      <div className="editorDiv">
+        <div className="tit1">
+          <h3>Markdown Editor: </h3>
+        </div>
+        <div className="textAreaDiv">
+          <textarea id="editor" onChange={handleChange} value={text}></textarea>
+        </div>
+      </div>
+      <div className="previewDiv">
+        <div className="tit2">
+          <h3>Markdown Previewer: </h3>
+        </div>
+        <div
+          id="preview"
+          dangerouslySetInnerHTML={{
+            __html: marked(text),
+          }}
+        ></div>
+      </div>
     </div>
   );
 }
